@@ -12,6 +12,10 @@ class CreateAction
   end
 
   def execute
-    RestClient.post @http_path, @data.to_json, content_type: :json, accept: :json
+    RestClient.post(
+      @http_path,
+      @data.to_json,
+      content_type: :json, accept: :json
+    )
   end
 end
