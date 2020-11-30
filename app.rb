@@ -3,6 +3,8 @@
 require 'sinatra'
 require 'json'
 
+require_relative 'automations.rb'
+
 before do
   content_type :json
 end
@@ -14,3 +16,8 @@ end
 get '/' do
   { 'message': 'Hello world!' }
 end
+
+# TODO by dojos
+# post '/events' do
+#   Automation.new('create', message: 'Ola').trigger
+# end
