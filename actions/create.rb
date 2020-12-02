@@ -7,9 +7,8 @@ class CreateAction
   attr_reader :http_path
 
   def initialize(options)
-    @http_path = 'localhost:9092'
-    puts options
-    @data = options.fetch(:data)["data"]
+    @http_path = 'https://tech-dojo-ruby-bridge.herokuapp.com/tickets'
+    @data = options.fetch(:data)
   end
 
   def execute

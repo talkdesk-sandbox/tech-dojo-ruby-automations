@@ -18,6 +18,7 @@ get '/' do
 end
 
 post '/events' do
-  data = JSON.load(request.body.string)["data"] # TODO validate fields to check if data exists
+  # TODO: validate fields to check if data exists
+  data = JSON.parse(request.body.string)['data']
   Automation.new('create', data).trigger
 end
