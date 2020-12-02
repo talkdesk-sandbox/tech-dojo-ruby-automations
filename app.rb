@@ -3,7 +3,7 @@
 require 'sinatra'
 require 'json'
 
-require_relative 'automations.rb'
+require_relative 'automation.rb'
 
 before do
   content_type :json
