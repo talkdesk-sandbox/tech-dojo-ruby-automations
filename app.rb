@@ -18,5 +18,6 @@ get '/' do
 end
 
 post '/events' do
-  Automation.new('create', message: 'Ola').trigger
+  data = JSON.load(request.body.string)["data"] # TODO validate fields to check if data exists
+  Automation.new('create', data).trigger
 end

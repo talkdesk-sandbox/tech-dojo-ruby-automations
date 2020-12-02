@@ -7,8 +7,9 @@ class CreateAction
   attr_reader :http_path
 
   def initialize(options)
-    @http_path = 'https://run.mocky.io/v3/0ec25a7a-3eba-4249-9eae-e32cba5923a7'
-    @data = options.fetch(:data)
+    @http_path = 'localhost:9092'
+    puts options
+    @data = options.fetch(:data)["data"]
   end
 
   def execute
